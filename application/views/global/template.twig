@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ sitename }}</title>
+    <!-- Metas -->
+    <meta name="description" content="">
+    <meta name="Keywords" content="" />
+
+    <!-- Meta: Open Graph protocol -->
+    <meta property="og:site_name" content="">
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ base_url() }}" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="">
+    <meta property="og:locale" content="es_ES">
+    <meta property="article:author" content="">
+
+    <!-- Opengraph Facebook -->
+    <meta property="fb:app_id" content="">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="">
+    <meta name="twitter:creator" content="">
+    <meta name="twitter:url" content="{{ base_url() }}">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
+
+    <!-- Styls -->
+    <link rel="stylesheet" href="{{ base_url('assets/bootstrap/dist/css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ base_url('assets/@fortawesome/fontawesome-free/css/all.css') }}">
+    <link rel="stylesheet" href="{{ base_url('assets/own/css/site.css') }}">
+
+
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <header>
+    
+                </header>
+                <section>
+                    {% block content %}
+    
+                    {% endblock content %}
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- Scripts -->
+    <script src="{{ base_url('assets/jquery/dist/jquery.js') }}"></script>
+    <script src="{{ base_url('assets/@fortawesome/fontawesome-free/js/all.js') }}"></script>
+    <script src="{{ base_url('assets/bootstrap/dist/js/bootstrap.bundle.js') }}"></script>
+</body>
+</html>
