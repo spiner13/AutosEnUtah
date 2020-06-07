@@ -18,6 +18,16 @@ class Dashboard extends MY_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+
+	public function __construct()
+	{
+		parent::__construct();
+		 //$this->input->ip_address();
+		 //'208.80.152.201'
+		$this->main->getvisitorInfo($this->input->ip_address());
+		$this->twig->addGlobal('index', true);
+	}
+	
 	public function index()
 	{
 		$this->twig->display('page/index');

@@ -38,23 +38,31 @@
 
 </head>
 <body>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col">
-                <header>
-    
-                </header>
-                <section>
-                    {% block content %}
-    
-                    {% endblock content %}
-                </section>
+    <nav class="navbar navbar-light sticky-top bg-light bgColor">
+        <a class="navbar-brand ml-4" href="{{ base_url() }}">
+          <img src="{{ base_url('assets/own/img/aeu.jpeg')}}" width="150" height="85" alt="" loading="lazy">
+        </a>
+        {% if index  %}
+            <a class="btn btn-success" href="{{ base_url('/Apply/one') }}">¡ Aplica ahora !</a>
+        {% endif %}
+    </nav>
+    <main class="container-fluid">
+        {% block content %}
+        
+        {% endblock content %}
+        <footer class="mt-4">
+            <hr class="mt-4">
+            <div class="row mt-4 justify-content-center">
+                <div class="col-11">
+                    <p class="text-center">Copyright © 2020 AutosEnUtah. </p>
+                </div>
             </div>
-        </div>
-    </div>
+        </footer>
+    </main>
     <!-- Scripts -->
     <script src="{{ base_url('assets/jquery/dist/jquery.js') }}"></script>
     <script src="{{ base_url('assets/@fortawesome/fontawesome-free/js/all.js') }}"></script>
     <script src="{{ base_url('assets/bootstrap/dist/js/bootstrap.bundle.js') }}"></script>
+    <script src="{{ base_url('assets/own/js/site.js') }}"></script>
 </body>
 </html>

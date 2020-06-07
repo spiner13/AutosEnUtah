@@ -1,0 +1,15 @@
+/*
+* Estilos generales de la pagina
+*/
+
+* { margin: 0; padding: 0; }
+
+.bgColor{
+    background-color: #ffffff !important; 
+    border-width: 0px 0px 1px 0px;
+    border-style: solid;
+}
+
+.bgcarrousel{
+    background-color: #82817f !important; 
+}
