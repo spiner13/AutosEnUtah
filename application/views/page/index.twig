@@ -1,12 +1,12 @@
 {% extends "global/template.twig" %}
 {% block content %}
     <div class="row justify-content-center ">
-        <div class="col-10">
+        <div class="col-11">
             <div id="cars" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner text-center">
                     {% for row in carousel %}
                       <div class="carousel-item {% if loop.index == 1 %} active {% endif %}">
-                            <img class="d-block mx-auto img-fluid" style="width: 100%;height:650px" src="{{ base_url('assets/own/img/cars/carousel/'~ row ~'.jpg') }}" alt="Picture">
+                            <img class="d-block mx-auto img-fluid"  src="{{ base_url('assets/own/img/cars/carousel/'~ row ~'.jpg') }}" alt="Picture">
                       </div>
                     {% endfor %}
                 </div>
@@ -22,11 +22,11 @@
         </div>
     </div>
     <div class="row justify-content-center">
-        <div class="col-11">
+        <div class="col-md-11 col-sm-11 col-xs-11">
             <div class="card mt-2 mb-3">
                 <div class="card-body">
                     <div class="row">
-                        <div class="col">
+                        <div class="col-md-6 col-sm-11 col-xs-11">
                            <p class="h3">Aplica en linea</p>
                            <p class="text-muted ">¿Quieres un auto nuevo? inicia el proceso desde la comodidad de tu casa</p>
                            <p class="h3 text-right">Recibe ofertas</p>
@@ -34,7 +34,7 @@
                            <p class="h3">Concreta</p>
                            <p class="text-muted">Sal rodando y disruta del auto de tus sueños!</p>
                         </div>
-                        <div class="col align-self-end">
+                        <div class="col-md-6 col-sm-11 col-xs-11 align-self-end">
                             <img class="d-block mx-auto img-fluid mb-4" src="{{ base_url('assets/own/img/car.png') }}" alt="">
                             <a class="btn btn-success btn-block" href="{{ base_url('/Apply/one') }}">¡ Aplica ahora !</a>
                         </div>
@@ -42,39 +42,37 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>       
     <div class="row justify-content-center">
-        <div class="col-11">
-            <div class="">
-                <h4 class="h4 ml-4 mt-4 mb-4"> Ellos encontraron el auto de sus sueños.</h4>
-                <div class="row mb-4 justify-content-center">
-                    {% for row in testimonial %}
-                        {% if loop.index <= 4 %}
-                            <div class="col ml-4">
-                                <div class="card" style="width: 18rem;">
-                                    <img class="card-img-top" src="{{ base_url('assets/own/img/cars/testimonials/'~ row.picture ~'.jpg') }}" alt="Card image cap">
-                                   <!-- <div class="card-body">
-                                        <blockquote class="blockquote">
-                                            <p class="mb-0">{{ row.text}}</p>
-                                            <footer class="blockquote-footer">{{ row.name}}</footer>
-                                        </blockquote>
-                                    </div> -->
-                                </div>
+        <h4 class="h2 ml-4 mt-4 mb-4"> Ellos encontraron el auto de sus sueños.</h4>     
+        <div class="col-md-11 col-sm-11 col-xs-12">
+            <div class="row mb-4 justify-content-center">
+                {% for row in testimonial %}
+                    {% if loop.index <= 4 %}
+                        <div class="col-md-3 col-sm-11 col-xs-11">
+                            <div class="card m-2">
+                                <img class="card-img-top img-fluid" src="{{ base_url('assets/own/img/cars/testimonials/'~ row.picture ~'.jpg') }}" alt="Card image cap">
+                                <!-- <div class="card-body">
+                                    <blockquote class="blockquote">
+                                        <p class="mb-0">{{ row.text}}</p>
+                                        <footer class="blockquote-footer">{{ row.name}}</footer>
+                                    </blockquote>
+                                </div> -->
                             </div>
-                        {% endif %}
-                    {% endfor %}
-                </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
             </div>
         </div>
     </div>
     <div class="row justify-content-center">
-        <div class="col-11">
+        <div class="col-md-11 col-sm-11 col-xs-12">
             <div class="row mb-4 justify-content-center">
                 {% for row in testimonial %}
                     {% if loop.index > 4 %}
-                        <div class="col ml-4">
-                            <div class="card" style="width: 18rem;">
-                                <img class="card-img-top" src="{{ base_url('assets/own/img/cars/testimonials/'~ row.picture ~'.jpg') }}" alt="Card image cap">
+                        <div class="col-md-3 col-sm-11 col-xs-11">
+                            <div class="card m-2">
+                                <img class="card-img-top img-fluid" src="{{ base_url('assets/own/img/cars/testimonials/'~ row.picture ~'.jpg') }}" alt="Card image cap">
                                 <!-- <div class="card-body">
                                     <blockquote class="blockquote">
                                         <p class="mb-0">{{ row.text}}</p>
