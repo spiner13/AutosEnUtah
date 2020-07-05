@@ -20,8 +20,16 @@ class Main_model extends CI_model
             unset( $query['as']);
             unset( $query['query']);
 
-            $this->db->insert('visitors', $query);
-            
+            if(!$this->db->select('*')->from('visitors')->where('ip', $query['ip'])->get()->row_array()){
+                    $this->db->insert('visitors', $query);
+                }else{
+                    echo "hola";
+
+                    $this->db->set('recurrent', 'recurrent+1', FALSE);
+                    $this->db->where('ip', $query['ip']);
+                    $this->db->update('visitors');
+            }
+
         } 
     }
 
