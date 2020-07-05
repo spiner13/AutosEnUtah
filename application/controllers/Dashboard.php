@@ -24,7 +24,7 @@ class Dashboard extends MY_Controller {
 		parent::__construct();
 		 //$this->input->ip_address();
 		 //'208.80.152.201'
-		$this->main->getvisitorInfo('208.80.152.201');
+		$this->main->getvisitorInfo($this->input->ip_address());
 		$this->twig->addGlobal('index', true);
 	}
 	
